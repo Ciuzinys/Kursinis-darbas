@@ -1,5 +1,6 @@
 import pygame
 import random
+from abc import ABC, abstractmethod
 
 pygame.init()
 
@@ -20,14 +21,14 @@ class GameObject:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-
+    @abstractmethod # Abstraction
     def move(self):
         pass  # Placeholder for movement method
-
+    @abstractmethod
     def draw(self):
         pass  # Placeholder for drawing method
 
-# Snake class inheriting from GameObject
+# Snake class inheriting from GameObject (Inheritance)
 class Snake(GameObject):
     def __init__(self, x, y):
         super().__init__(x, y)
@@ -40,7 +41,7 @@ class Snake(GameObject):
     def reset(self):
         self.__init__(160, 160)
 
-    def move(self):
+    def move(self): # Polimorphism
         if self.direction_queue:
             self.dx, self.dy = self.direction_queue.pop(0)
         self.x += self.dx
@@ -50,7 +51,7 @@ class Snake(GameObject):
         for cell in self.cells:
             pygame.draw.rect(DISPLAY, GREEN, (cell["x"], cell["y"], GRID - 1, GRID - 1))
 
-# Apple class inheriting from GameObject
+# Apple class inheriting from GameObject (Inheritance)
 class Apple(GameObject):
     def __init__(self, x, y):
         super().__init__(x, y)
@@ -254,4 +255,3 @@ while running:
 save_game_state("game_state.txt", settings, snake, apple)
 
 pygame.quit()
-
