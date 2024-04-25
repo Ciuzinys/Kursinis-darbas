@@ -11,8 +11,8 @@ My application is a classic Snake game implemented using the Pygame library in P
 To run the program, ensure you have Python and Pygame installed on your system. Python can be downloaded from the official website [here](https://www.python.org), and Pygame can be installed using pip in PowerShell using a command:
 Pip install pygame
 
-Once installed, execute the Python script `SnakeGame.py` by running the following command in the terminal:
-Python SnakeGame.py
+Once installed, execute the Python script `README.md` by running the following command in the terminal:
+Python README.md
 
 ### c. How to use the program?
 
