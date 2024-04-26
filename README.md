@@ -35,6 +35,14 @@ The program fulfills the following functional requirements:
 
 3. **Game Over Conditions**: Ends the game when the snake collides with the walls or itself. This is achieved by checking for collisions between the snake's head and the game boundaries or its own body segments.
 
+4. **Polimorphism**: Polimorphism is used between the lines 41 and 52. Code line: def move(self), def reset(self), def draw(self). I used polimorphism, because it allowed me to define methods in the child class that have the same name as the methods in the parent class
+
+5. **Abstraction**: Abstraction is used between the lines 24 and 29. Code line: @abstractionmethod. I chose to use abstraction here, because other people do not really need to know how the snake is moving or how everything is drawn.
+
+6. **Encapsulation**: Encapsulation is used between the lines 20 and 84. Code line: class GameObject. Encapsulation is used thoughout the entire code, but it shows more accurately in lines where a class is used.
+
+7. **Inheritance**: Inheritance is used between the lines 32 and 64. Code line: class Apple(GameObject), class Snake(GameObject). I chose to use inheritance here, because I needed that the snake and apple would take the coordinates.
+
 ## 3. Results and Summary
 
 ### a. Results
